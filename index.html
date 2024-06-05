@@ -23,7 +23,8 @@ title: Homepage
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quaerat necessitatibus? Praesentium fugit ex neque magni, possimus, iste itaque voluptatem id doloremque voluptas consequatur dolor cumque! Dolores possimus laboriosam adipisci.</p>
     </div>
 
-        {% assign  = thats-our-dogs | where: 'our-dogs', true %}
+        {% assign thats-our-dogs = site.our-dogs | where_exp:"our-dogs", true %}
+        <!-- {% assign thats-our-dogs = site.our-dogs | where: 'our-dogs', true %} -->
 
         {% for our-dogs in thats-our-dogs  limit:3 %}
 
